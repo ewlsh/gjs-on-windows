@@ -3,12 +3,13 @@ git clone https://github.com/ptomato/mozjs -b mozjs78 --single-branch --depth 1 
 cd mozjs-78
 
 export JS_STANDALONE=1
+export LINKER="GNU gold"
 
 cd js/src
 mkdir _build
 cd _build
 ../configure --enable-nspr-build --disable-js-shell --host=x86_64-pc-mingw32 --target=x86_64-pc-mingw32 \
-    --disable-jemalloc --with-intl-api --enable-debug --enable-optimize --prefix="./mozjs78"
-mozmake
-mozmake install
+    --disable-jemalloc --with-intl-api --enable-debug --enable-optimize --enable-linker "GNU gold" --prefix="C:/ProgramData/mozjs-78/"
+make
+make install
 
