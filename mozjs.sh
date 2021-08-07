@@ -8,7 +8,7 @@ cd js/src
 mkdir _build
 cd _build
 ../configure --enable-nspr-build --disable-js-shell --host=x86_64-pc-mingw32 --target=x86_64-pc-mingw32 \
-    --disable-jemalloc --with-intl-api --enable-debug --enable-optimize --enable-linker gold --prefix="C:/ProgramData/mozjs-78/"
+    --disable-jemalloc --with-intl-api --enable-debug --enable-optimize --enable-gold --prefix="C:/ProgramData/mozjs-78/"
 make
 make install
 
