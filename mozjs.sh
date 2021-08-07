@@ -1,9 +1,14 @@
-git clone https://github.com/mozilla/gecko-dev/ --depth 1 -b esr78 --single-branch mozilla-esr78
+git clone https://github.com/ptomato/mozjs -b mozjs78 --single-branch --depth 1 mozjs-78
 
-cd mozilla-esr78
+cd mozjs-78
 
-export MOZCONFIG="D:\a\gjs-on-windows\gjs-on-windows\mozconfig-win32"
 export JS_STANDALONE=1
 
-./mach build
+cd js/src
+mkdir _build
+cd _build
+../configure --enable-nspr-build --disable-js-shell --host=x86_64-pc-mingw32 --target=x86_64-pc-mingw32 \
+    --disable-jemalloc --with-intl-api --enable-debug --enable-optimize --prefix="./mozjs78"
+make
+make install
 
