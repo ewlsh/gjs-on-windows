@@ -9,6 +9,6 @@ mkdir _build
 cd _build
 ../configure --enable-nspr-build --disable-js-shell --host=x86_64-pc-mingw32 --target=x86_64-pc-mingw32 \
     --disable-jemalloc --with-intl-api --enable-debug --enable-optimize --prefix="./mozjs78"
-make
-make install
+mozmake
+mozmake install
 
