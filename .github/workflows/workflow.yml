@@ -10,6 +10,9 @@ jobs:
       uses: actions/checkout@v2
       with:
         ref: main
-    - name: Build Mozjs
+    - name: Setup MozillaBuild
       shell: pwsh
+      run: ./mozilla.bat
+    - name: Build Mozjs
+      shell: C:\mozilla-build\start-shell.bat {0}
       run: ./mozjs.bat
