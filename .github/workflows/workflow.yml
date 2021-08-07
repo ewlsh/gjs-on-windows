@@ -1,0 +1,15 @@
+name: Build GJS on Windows
+
+on: [push]
+
+jobs:
+  Build-Mozjs:
+    runs-on: windows-2019
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        ref: main
+    - name: Build Mozjs
+      shell: pwsh
+      run: ./mozjs.bat
