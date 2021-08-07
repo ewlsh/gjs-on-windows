@@ -14,5 +14,5 @@ jobs:
       shell: pwsh
       run: ./mozilla.bat
     - name: Build Mozjs
-      shell: C:\mozilla-build\start-shell.bat 'bash ./mozjs.sh {0}'
+      shell: C:\mozilla-build\start-shell.bat '/d/a/gjs-on-windows/gjs-on-windows/mozjs.sh {0}'
       run: ./noop.sh
