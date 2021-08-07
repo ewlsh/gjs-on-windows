@@ -1,3 +1,5 @@
+git clone https://github.com/ptomato/mozjs
+
 cd mozjs
 
 export MOZCONFIG="D:\a\gjs-on-windows\gjs-on-windows\mozconfig-win32"

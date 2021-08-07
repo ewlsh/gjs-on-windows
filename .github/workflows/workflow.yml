@@ -14,5 +14,5 @@ jobs:
       shell: pwsh
       run: ./mozilla.bat
     - name: Build Mozjs
-      shell: C:\mozilla-build\start-shell.bat "bash {0}""
+      shell: C:\mozilla-build\start-shell.bat "bash \"{0}\""
       run: ./mozjs.sh
